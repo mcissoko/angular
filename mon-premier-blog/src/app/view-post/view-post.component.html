@@ -1,0 +1,13 @@
+<div [ngClass]="{
+'list-group-item-success': post.loveIts > 0,
+'list-group-item-danger': post.loveIts < 0 }">
+    <div class="col-xs-12">
+      <h1>{{post.title}} </h1>
+      <h3>{{post.content}} </h3>
+      <br>
+      <br>
+      <p class="list-group-item-text" *ngIf="post.created_at">Nombre de 'loveIts' :  {{post.loveIts}} </p>
+      <br>
+      <button class="btn btn-primary" (click)="onBack()">Retour</button>
+    </div>
+  </div>
